@@ -9,10 +9,10 @@ export class Hero{
     id: number;
   name: string;
   slug: string;
-  /*powerstats : Powerstats;
+  powerstats : Powerstats;
   appearance: Appearance;
   biography: Biography;
   work: Work;
   connections: Connections;
-  images: Images;*/
+  images: Images;
 }
