@@ -59,6 +59,11 @@ h1 {
   nav a.active {
     color: #039be5;
   }
+
+  @font-face {
+    font-family: TT Supermolot Neue;
+    src: url(assets/fonts/TTSupermolotNeue-DemiBold.otf) format("opentype");
+  }
   
   /* everywhere else */
   * {

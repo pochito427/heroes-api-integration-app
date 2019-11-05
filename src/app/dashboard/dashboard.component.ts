@@ -7,6 +7,8 @@ import { HeroService } from '../hero.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
+
 export class DashboardComponent implements OnInit {
 
   heroes: Hero[] = [];
@@ -17,9 +19,26 @@ export class DashboardComponent implements OnInit {
     this.getHeroes(); 
   }
 
+  generateShuffleArray(inputArray: Hero[]){
+
+    for (let i: number = inputArray.length - 1; i >= 0; i--){
+      var randomIndex = Math.floor(Math.random() * (i + 1));
+      var itemAtIndex = inputArray[randomIndex];
+
+      inputArray[randomIndex] = inputArray[i];
+      inputArray[i] = itemAtIndex;
+    }
+    
+    return inputArray;
+
+  }
+
   getHeroes(): void {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(0, 20));
+      .subscribe(heroes => this.heroes = this.generateShuffleArray(heroes).slice(0, 20));
   }
+
+ 
+
 
 }
