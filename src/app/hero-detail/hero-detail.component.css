@@ -14,18 +14,45 @@ label {
   button {
     margin-top: 20px;
     font-family: Arial;
-    background-color: #eee;
+    background-color: #3B3B3B;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
     cursor: hand;
+    color: #eee;
   }
   button:hover {
     background-color: #cfd8dc;
+    color: #3B3B3B;
   }
   button:disabled {
     background-color: #eee;
     color: #ccc;
     cursor: auto;
+  }
+  h2{
+    color: #0044A6;
+  }
+  table{
+    width: 100%;
+  }
+  table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  .module {
+    text-align: center;
+    color: #3B3B3B;
+    min-width: 120px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px 4px 0px 0px;
+    opacity: 1;
+    font-weight: bold;
+  }
+  .module:hover {
+    background-color: #eee;
+    cursor: pointer;
+    color: #607d8b;
   }

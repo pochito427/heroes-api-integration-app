@@ -3,6 +3,7 @@
   <li *ngFor="let hero of heroes">
         <a routerLink="/detail/{{hero.id}}">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
+            <img src="{{hero.images.xs}}" alt="{{hero.slug}}">
         </a>
   </li>
 </ul>

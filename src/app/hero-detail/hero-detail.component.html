@@ -1,10 +1,124 @@
 <div *ngIf="hero">
 
-    <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
-    <div><span>name: </span>{{hero.name}}</div>
-    <div><span>slug: </span>{{hero.slug}}</div>
+    <div class="module hero">
+            <h2>{{hero.name | uppercase}} Details</h2>
+            <div class="image-lg"><img src="{{hero.images.lg}}" alt="{{hero.slug}}"></div>
+            <div><span>Id: </span>{{hero.id}}</div>
+            <div><span>Name: </span>{{hero.name}}</div>
+            <div><span>Slug: </span>{{hero.slug}}</div>
+            <br>
+            <div>
+                <table>
+                    <caption>Powerstats</caption>
+                    <tr>
+                            <th>Intelligence</th>
+                            <th>Strength</th>
+                            <th>Speed</th>
+                            <th>Durability</th>
+                            <th>Power</th>
+                            <th>Combat</th>
+        
+                    </tr>
+                    <tr>
+                        <td>{{hero.powerstats.intelligence}}</td>
+                        <td>{{hero.powerstats.strength}}</td>
+                        <td>{{hero.powerstats.speed}}</td>
+                        <td>{{hero.powerstats.durability}}</td>
+                        <td>{{hero.powerstats.power}}</td>
+                        <td>{{hero.powerstats.combat}}</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <br>
+            <div>
+               <table>
+                   <caption>Appearance</caption>
+                   <tr>
+                       <th>Gender</th>
+                       <th>Race</th>
+                       <th colspan="2">Height</th>
+                       <th colspan="2">Weight</th>
+                       <th>Eye color</th>
+                       <th>Hair color</th>
+                   </tr>
+                   <tr>
+                       <td>{{hero.appearance.gender}}</td>
+                       <td>{{hero.appearance.race}}</td>
+                       <td>{{hero.appearance.height[0]}}</td>
+                       <td>{{hero.appearance.height[1]}}</td>
+                       <td>{{hero.appearance.weight[0]}}</td>
+                       <td>{{hero.appearance.weight[1]}}</td>
+                       <td>{{hero.appearance.eyeColor}}</td>
+                       <td>{{hero.appearance.hairColor}}</td>
+                   </tr>
+               </table>
+            </div>
+            <br>
+            <div>
+                <table>
+                    <caption>Biography</caption>
+                    <tr>
+                        <th>Full Name</th>
+                        <td>{{hero.biography.fullName}}</td>
+                    </tr>
+                    <tr>
+                        <th>Alter Egos</th>
+                        <td>{{hero.biography.alterEgos}}</td>
+                    </tr>
+                    <tr>
+                        <th>Aliases</th>
+                        <td>{{hero.biography.aliases}}</td>
+                    </tr>
+                    <tr>
+                        <th>Place of Birth</th>
+                        <td>{{hero.biography.placeOfBirth}}</td>
+                    </tr>
+                    <tr>
+                        <th>First Appearance</th>
+                        <td>{{hero.biography.firstAppearance}}</td>
+                    </tr>
+                    <tr>
+                        <th>Publisher</th>
+                        <td>{{hero.biography.publisher}}</td>
+                    </tr>
+                    <tr>
+                        <th>Alignment</th>
+                        <td>{{hero.biography.alignment}}</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div>
+                <table>
+                    <caption>Work</caption>
+                    <tr>
+                        <th>Occupation</th>
+                        <td>{{hero.work.occupation}}</td>
+                    </tr>
+                    <tr>
+                        <th>Base</th>
+                        <td>{{hero.work.base}}</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div>
+                <table>
+                    <caption>Connections</caption>
+                    <tr>
+                        <th>Group Affiliation</th>
+                        <td>{{hero.connections.groupAffiliation}}</td>
+                    </tr>
+                    <tr>
+                        <th>Relatives</th>
+                        <td>{{hero.connections.relatives}}</td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+    
 
-    <button (click)="goBack()">go back</button>
+    <button (click)="goBack()">Go Back</button>
   
 </div>
